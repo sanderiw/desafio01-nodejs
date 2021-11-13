@@ -94,6 +94,7 @@ app.delete("/todos/:id", checksExistsUserAccount, (request, response) => {
   }
   const indexOfTodo = user.todos.indexOf(todo);
   user.todos.splice(indexOfTodo, 1);
+
   return response.status(204).json({});
 });
 
